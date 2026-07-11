@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "./tokens.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--type-body);
+  --font-mono: var(--type-label);
+  --font-heading: var(--type-display);
+  --font-display: var(--type-display);
+  --font-script: var(--type-script);
+  --color-ring: var(--ring);
+  --color-border: var(--border);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-moss: var(--moss);
+  --color-moss-soft: var(--moss-soft);
+  --color-moss-pale: var(--moss-pale);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-soft: var(--terracotta-soft);
+  --color-terracotta-pale: var(--terracotta-pale);
+  --ease-reveal: var(--ease-reveal);
+  --ease-cine: var(--ease-cine);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    color-scheme: light;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(rgba(107, 91, 68, 0.05) 0.6px, transparent 0.6px),
+      radial-gradient(rgba(107, 91, 68, 0.035) 0.6px, transparent 0.6px);
+    background-size: 3px 3px, 5px 5px;
+    background-position: 0 0, 1.5px 2.5px;
+  }
+  ::selection {
+    background: var(--terracotta-pale);
+    color: var(--foreground);
+  }
+  h1, h2, h3 {
+    font-family: var(--type-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--type-display);
+  }
+  .font-script {
+    font-family: var(--type-script);
+  }
+  .text-label {
+    font-family: var(--type-label);
+    font-size: 0.7rem;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+  }
+
+  /* Progressive-enhancement scroll reveal: visible by default so no-JS /
+     slow-hydration visitors never see permanently hidden content. GSAP
+     animates FROM this visible state, not TO it. */
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Aged paper leaf surface for herbarium album pages */
+  .leaf-paper {
+    background-color: var(--card);
+    background-image:
+      linear-gradient(135deg, rgba(166, 75, 61, 0.05) 0%, transparent 35%),
+      linear-gradient(315deg, rgba(71, 86, 58, 0.06) 0%, transparent 40%),
+      radial-gradient(ellipse at 50% 0%, rgba(36, 26, 16, 0.05), transparent 55%);
+    box-shadow:
+      0 1px 0 rgba(36, 26, 16, 0.06) inset,
+      0 18px 40px -24px rgba(36, 26, 16, 0.35);
+    border: 1px solid var(--border);
+  }
+
+  /* Deckled / torn paper edge via clip-path */
+  .deckle-edge {
+    clip-path: polygon(
+      0% 0.6%, 2% 0%, 5% 0.9%, 8% 0.1%, 11% 0.8%, 14% 0%, 17% 0.7%, 20% 0.1%,
+      23% 0.9%, 26% 0%, 29% 0.6%, 32% 0.1%, 35% 0.8%, 38% 0%, 41% 0.7%, 44% 0.1%,
+      47% 0.9%, 50% 0%, 53% 0.6%, 56% 0.1%, 59% 0.8%, 62% 0%, 65% 0.7%, 68% 0.1%,
+      71% 0.9%, 74% 0%, 77% 0.6%, 80% 0.1%, 83% 0.8%, 86% 0%, 89% 0.7%, 92% 0.1%,
+      95% 0.9%, 98% 0%, 100% 0.6%,
+      100% 99.4%, 98% 100%, 95% 99.1%, 92% 99.9%, 89% 99.2%, 86% 100%, 83% 99.3%,
+      80% 99.9%, 77% 99.1%, 74% 100%, 71% 99.4%, 68% 99.9%, 65% 99.2%, 62% 100%,
+      59% 99.3%, 56% 99.9%, 53% 99.1%, 50% 100%, 47% 99.4%, 44% 99.9%, 41% 99.2%,
+      38% 100%, 35% 99.3%, 32% 99.9%, 29% 99.1%, 26% 100%, 23% 99.4%, 20% 99.9%,
+      17% 99.2%, 14% 100%, 11% 99.3%, 8% 99.9%, 5% 99.1%, 2% 100%, 0% 99.4%
+    );
+  }
+
+  /* Washi-tape strip used to "pin" specimen cards to the page */
+  .washi-tape {
+    background: var(--specimen-tape-bg);
+    box-shadow: 0 1px 3px rgba(36, 26, 16, 0.2);
+    opacity: 0.9;
+  }
+
+  /* Small brass pin marker */
+  .pin-dot {
+    background: radial-gradient(circle at 35% 30%, #f0c8b8, var(--specimen-pin-color) 70%);
+    box-shadow: 0 1px 2px rgba(36, 26, 16, 0.45), inset 0 0 0 1px rgba(36, 26, 16, 0.15);
+  }
+
+  .specimen-label-border {
+    border: 1px dashed var(--moss-soft);
+  }
+
+  .ink-divider {
+    background: linear-gradient(90deg, transparent, var(--moss-soft) 15%, var(--moss-soft) 85%, transparent);
+    height: 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

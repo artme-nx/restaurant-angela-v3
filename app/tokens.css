@@ -1,0 +1,79 @@
+/* Design Tokens - Auto-generated */
+/* Do not edit directly - modify design/tokens.json instead */
+
+/* === PRIMITIVES === */
+:root {
+  --primitive-color-paper-100: #FBF6EA;
+  --primitive-color-paper-200: #F3EAD3;
+  --primitive-color-paper-300: #E6D8B8;
+  --primitive-color-paper-400: #D3C09A;
+  --primitive-color-ink-950: #241A10;
+  --primitive-color-ink-800: #3B2C1C;
+  --primitive-color-ink-500: #6B5B44;
+  --primitive-color-sage-700: #47563A;
+  --primitive-color-sage-500: #6C7C52;
+  --primitive-color-sage-300: #9FAE81;
+  --primitive-color-bloom-600: #A64B3D;
+  --primitive-color-bloom-400: #C97862;
+  --primitive-color-bloom-200: #E4B49B;
+  --primitive-font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --primitive-font-body: var(--font-lora), 'Lora', Georgia, serif;
+  --primitive-font-script: var(--font-caveat), 'Caveat', cursive;
+  --primitive-font-label: var(--font-courier), 'Courier Prime', 'Courier New', monospace;
+  --primitive-motion-duration-micro: 180ms;
+  --primitive-motion-duration-base: 320ms;
+  --primitive-motion-duration-reveal: 1.2s;
+  --primitive-motion-duration-cine: 1.8s;
+  --primitive-motion-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --primitive-motion-ease-cine: cubic-bezier(0.65, 0, 0.35, 1);
+  --primitive-tracking-display: 0em;
+  --primitive-tracking-label: 0.22em;
+}
+
+/* === SEMANTIC === */
+:root {
+  --background: #F3EAD3;
+  --foreground: #241A10;
+  --card: #FBF6EA;
+  --card-foreground: #241A10;
+  --muted: #E6D8B8;
+  --muted-foreground: #6B5B44;
+  --accent: #E6D8B8;
+  --accent-foreground: #241A10;
+  --border: #D3C09A;
+  --ring: #C97862;
+  --radius: 0.15rem;
+  --moss: #47563A;
+  --moss-soft: #6C7C52;
+  --moss-pale: #9FAE81;
+  --terracotta: #A64B3D;
+  --terracotta-soft: #C97862;
+  --terracotta-pale: #E4B49B;
+  --surface-line: #D3C09A;
+  --type-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --type-body: var(--font-lora), 'Lora', Georgia, serif;
+  --type-script: var(--font-caveat), 'Caveat', cursive;
+  --type-label: var(--font-courier), 'Courier Prime', 'Courier New', monospace;
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-cine: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-micro: 180ms;
+  --duration-base: 320ms;
+  --duration-reveal: 1.2s;
+  --tracking-display: 0em;
+  --tracking-label: 0.22em;
+}
+
+/* === COMPONENTS === */
+:root {
+  --specimen-card-bg: #FBF6EA;
+  --specimen-card-border: #D3C09A;
+  --specimen-pin-color: #A64B3D;
+  --specimen-tape-bg: rgba(230, 216, 184, 0.65);
+  --hero-vignette: radial-gradient(ellipse 90% 60% at 50% 0%, rgba(36, 26, 16, 0.08), transparent 60%);
+  --button-primary-bg: #A64B3D;
+  --button-primary-fg: #FBF6EA;
+  --button-primary-hover-bg: #241A10;
+  --button-primary-hover-fg: #FBF6EA;
+  --button-ghost-border: #47563A;
+  --button-ghost-hover-border: #A64B3D;
+}
