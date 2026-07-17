@@ -45,6 +45,37 @@ export default function RootLayout({
       className={`${cormorant.variable} ${lora.variable} ${caveat.variable} ${courierPrime.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              name: "Restoran Angela",
+              description:
+                "Restoran i grill u Svetom Filipu i Jakovu, na pješačkoj uličici korak od mora. Svježa riba, škampi i lignje s gradela, mesne i riblje plate.",
+              servesCuisine: ["Dalmatinska", "Riba i plodovi mora", "Roštilj", "Mediteranska"],
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Ul. kralja Petra Krešimira IV 130",
+                addressLocality: "Sveti Filip i Jakov",
+                postalCode: "23207",
+                addressRegion: "Zadarska županija",
+                addressCountry: "HR",
+              },
+              telephone: "+38523389254",
+              url: "https://artme-nx.github.io/restaurant-angela-v3/",
+              priceRange: "€€",
+              acceptsReservations: "True",
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.8",
+                bestRating: "5",
+                ratingCount: "278",
+              },
+            }),
+          }}
+        />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

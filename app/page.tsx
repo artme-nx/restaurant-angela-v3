@@ -22,7 +22,7 @@ const MENU: {
       {
         latin: "Loligo a gradelis",
         name: "Lignje s gradela",
-        note: "Gosti ih izdvajaju kao izuzetno svježe i nježne — jedan je zapisao da su lignje bile 'super svježe, a usluga savršena'.",
+        note: "Cijele lignje s gradela, izuzetno svježe i nježne — gosti ih redovito izdvajaju u recenzijama.",
       },
       {
         latin: "Palaemon a gradelis",
@@ -48,7 +48,7 @@ const MENU: {
       {
         latin: "Carnes mixtae a gradelis",
         name: "Miješano meso s gradela",
-        note: "Kućni je adut — jedan je gost napisao da je to 'najbolji miješani gradele koji sam probao u Hrvatskoj'.",
+        note: "Kućni adut — miješano meso pečeno na žaru do savršenstva, sočno i obilno.",
       },
       {
         latin: "Discus carnium",
@@ -62,26 +62,26 @@ const MENU: {
 const REVIEWS = [
   {
     quote:
-      "Najbolji miješani gradele koji sam probao u Hrvatskoj.",
-    attr: "gost, Tripadvisor",
+      "Daleko najbolji restoran u Sv. Filipu i Jakovu. Roštilj je bio pun pogodak — svako meso pečeno do savršenstva, sočno i ukusno.",
+    attr: "Damir Stanin, Google",
     rotate: "-2deg",
   },
   {
     quote:
-      "Odlična riba — lignje i škampi s gradela bili su izvrsni, a porcije obilne.",
-    attr: "gost, Tripadvisor",
+      "Za razliku od ostalih restorana, ovdje dobijete dobre porcije i ukusnu hranu, a cijene su prihvatljive.",
+    attr: "Ena Loborec, Google",
     rotate: "1.5deg",
   },
   {
     quote:
-      "Skriveni dragulj među turističkim zamkama Filip Jakova.",
-    attr: "gost, Tripadvisor",
+      "Lijepo mjesto, cijene prihvatljive, brza usluga, fina i ukusna hrana.",
+    attr: "Ninika Kristofić Kodba, Google",
     rotate: "-1deg",
   },
   {
     quote:
-      "Lignje su bile iznimno svježe, a usluga besprijekorna.",
-    attr: "gost, Tripadvisor",
+      "Hrana je odlična i dovoljno začinjena. Osoblje je jako ljubazno i pristupačno.",
+    attr: "Money&Stuff, Google",
     rotate: "2deg",
   },
 ];
